@@ -1,6 +1,5 @@
-package Pessoas;
+package modelo;
 
-import Endereco.Endereco;
 import java.time.LocalDate;
 
 public class FuncionarioTerceirizado extends Funcionario{
@@ -20,5 +19,16 @@ public class FuncionarioTerceirizado extends Funcionario{
 
     public void setEmpresaTerceirizada(String empresaTerceirizada) {
         this.empresaTerceirizada = empresaTerceirizada;
+    }
+    
+        @Override
+    public String getInformacoes(){
+        return  nome + " | Cpf: " + cpf + " | Idade: " + calcularIdade() + " anos " +
+            " | Cidade: "+ endereco.getCidade() + "| Rua : " + endereco.getRua() + ", " + endereco.getNumero() + 
+            " | Ctps: " + ctps + " | Salario: " + salario + " | Cargo: " + cargo + " | Empresa Terceirizada: " + empresaTerceirizada;
+    }
+    @Override
+    public void exibirInformacoes(){
+        System.out.println(getInformacoes());
     }
 }

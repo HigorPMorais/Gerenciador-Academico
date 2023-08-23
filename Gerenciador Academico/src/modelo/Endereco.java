@@ -1,4 +1,4 @@
-package Endereco;
+package modelo;
 
 public class Endereco {
     protected String cidade;

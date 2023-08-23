@@ -1,6 +1,6 @@
-package Curso;
+package modelo;
 
-import Pessoas.Aluno;
+import modelo.Aluno;
 import java.time.LocalDate;
 
 public class MatriculaCurso {

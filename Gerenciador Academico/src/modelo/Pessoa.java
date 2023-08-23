@@ -1,10 +1,9 @@
-package Pessoas;
+package modelo;
 
-import Endereco.Endereco;
 import java.time.LocalDate;
 import util.DateUtils;
 
-public abstract class Pessoa implements Comparable<Pessoa>{
+public abstract class Pessoa implements Comparable<Pessoa>, IExibirInformacoes{
 
     protected String nome;
     protected String cpf;
@@ -73,8 +72,13 @@ public abstract class Pessoa implements Comparable<Pessoa>{
         return this.nome.compareToIgnoreCase(o.getNome());
     }
     
+    @Override
+    public String getInformacoes(){
+        return  nome + " | Cpf: " + cpf + " | Idade: " + calcularIdade() + " anos " +
+                " | Cidade: "+ endereco.getCidade() + "| Rua : " + endereco.getRua() + ", " + endereco.getNumero();
+    }
+    @Override
     public void exibirInformacoes(){
-        System.out.println( nome + " | Cpf: " + cpf + " | Idade: " + calcularIdade() + " anos " +
-                " | Cidade: "+ endereco.getCidade() + "| Rua : " + endereco.getRua() + ", " + endereco.getNumero());
+        System.out.println(getInformacoes());
     }
 }

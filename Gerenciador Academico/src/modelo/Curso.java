@@ -1,12 +1,14 @@
-package Curso;
+package modelo;
 
-import Pessoas.Professor;
+import modelo.Professor;
 
 public class Curso {
     private String nome;
     private int cargaHoraria;
     private int qtdSemestres;
     private Professor coordenador;
+    
+    private int qtdAlunosCurso;
 
     public Curso() {
         coordenador = new Professor();
@@ -50,4 +52,12 @@ public class Curso {
     public void setCoordenador(Professor coordenador) {
         this.coordenador = coordenador;
     }    
+    
+    public void setQtdAlunosCurso(int qtdAlunosCurso) {
+        this.qtdAlunosCurso = qtdAlunosCurso;
+    }
+    
+    public void exibirInformacoes(){
+        System.out.println("Curso: " + nome + " | Carga horária: " + cargaHoraria + " | Quantidade semestre: " + qtdSemestres + " | Coordenador: " + coordenador.getNome() + " | Quantidade alunos: " + qtdAlunosCurso);
+    }
 }

@@ -1,6 +1,5 @@
-package Pessoas;
+package modelo;
 
-import Endereco.Endereco;
 import java.time.LocalDate;
 
 public class Funcionario extends Pessoa{
@@ -40,5 +39,16 @@ public class Funcionario extends Pessoa{
 
     public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+    
+    @Override
+    public String getInformacoes(){
+        return  nome + " | Cpf: " + cpf + " | Idade: " + calcularIdade() + " anos " +
+            " | Cidade: "+ endereco.getCidade() + "| Rua : " + endereco.getRua() + ", " + endereco.getNumero() + 
+            " | Ctps: " + ctps + " | Salario: " + salario + " | Cargo: " + cargo;
+    }
+    @Override
+    public void exibirInformacoes(){
+        System.out.println(getInformacoes());
     }
 }
