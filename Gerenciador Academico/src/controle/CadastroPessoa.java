@@ -60,6 +60,8 @@ public abstract class CadastroPessoa implements ICadastro{
         System.out.print("Data de nascimento: ");
         pessoa.setDataNascimento(Input.nextLocalDate());
         CadastroEndereco.setarDadosEndereco(pessoa.getEndereco());
+        System.out.println("E-mail: ");
+        pessoa.setEmail(Input.nextLine());
     }
 
     public Pessoa pesquisa() {

@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 import modelo.Pessoa;
 import util.DialogBoxUtils;
 
-public class CadastroProfessor extends CadastroFuncionario{
+public class CadastroProfessor extends CadastroPessoa{
 
     public CadastroProfessor() {
     }

@@ -22,6 +22,8 @@ public class CadastroFuncionario extends CadastroPessoa{
         fun.setCtps(Input.nextLine());
         System.out.print("Salário: ");
         fun.setSalario(Input.nextDouble());
+        System.out.println("Cargo: ");
+        fun.setCargo(Input.nextLine());
     }
 
     @Override

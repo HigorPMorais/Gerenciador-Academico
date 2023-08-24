@@ -3,6 +3,7 @@ package controle;
 import modelo.Curso;
 import util.Input;
 import java.util.ArrayList;
+import modelo.Professor;
 import util.DialogBoxUtils;
 
 public class CadastroCurso {
@@ -67,6 +68,8 @@ public class CadastroCurso {
         curso.setCargaHoraria(Input.nextInt());
         System.out.print("Quantidade de Semestres: ");
         curso.setQtdSemestres(Input.nextInt());
+        System.out.println("Coordenador: ");
+        CadastroProfessor.setarDados(curso.setCoordenador());
     }
     
     public void buscar(){
